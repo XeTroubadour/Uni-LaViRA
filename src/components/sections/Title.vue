@@ -7,10 +7,11 @@ import { Document, Files, MagicStick, Film, Link as LinkIcon } from '@element-pl
 const badge = 'Technical Report'
 
 // 标题
-const title = 'Academic Project Page Template'
+const titleLine1 = 'Uni-LaViRA: Language-Vision-Robot Actions'
+const titleLine2 = 'Translation for Unified Embodied Navigation'
 
 // 副标题
-const subtitle = 'A modern dark-themed project page for research papers'
+const subtitle = ''
 
 // 作者清单
 const authors = [
@@ -52,14 +53,15 @@ const stats = [
   <section id="overview" class="hero">
     <div class="hero-inner">
 
-      <!-- Badge -->
-      <div class="hero-badge">{{ badge }}</div>
-
       <!-- Title -->
-      <h1 class="hero-title">{{ title }}</h1>
+      <div class="hero-title-block">
+        <div class="hero-title-line1">Uni-LaViRA</div>
+        <div class="hero-title-line2">Language–Vision–Robot Actions Translation</div>
+        <div class="hero-title-line3">for Unified Embodied Navigation</div>
+      </div>
 
       <!-- Subtitle -->
-      <p class="hero-subtitle">{{ subtitle }}</p>
+      <p v-if="subtitle" class="hero-subtitle">{{ subtitle }}</p>
 
       <!-- Authors -->
       <div class="hero-authors">
@@ -111,7 +113,7 @@ const stats = [
 }
 
 .hero-inner {
-  max-width: var(--content-max-width);
+  max-width: 1700px;
   margin: 0 auto;
 }
 
@@ -129,19 +131,49 @@ const stats = [
   margin-bottom: 24px;
 }
 
-/* Title — gradient art text */
-.hero-title {
+/* Title block */
+.hero-title-block {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.hero-title-line1 {
   font-family: "MyFont", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1.15;
-  margin: 0 0 16px;
-  letter-spacing: 1px;
-  background: linear-gradient(135deg, #CF7359 0%, #CF7359 70%, #ffffff 100%);
+  font-size: 86px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #CF7359 0%, #D97E67 55%, #FFF1EC 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  text-shadow: 0 0 40px rgba(207, 115, 89, 0.15);
+  margin-bottom: 10px;
+}
+
+.hero-title-line2 {
+  font-family: "MyFont", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #CF7359 0%, #CF7359 70%, #FFF1EC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.hero-title-line3 {
+  font-family: "MyFont", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, rgba(207, 115, 89, 0.85) 0%, rgba(207, 115, 89, 0.7) 70%, rgba(255, 241, 236, 0.6) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Subtitle */
@@ -264,8 +296,13 @@ const stats = [
   .hero {
     padding: 80px 16px 32px;
   }
-  .hero-title {
-    font-size: 32px;
+  .hero-title-line1 {
+    font-size: 42px;
+    letter-spacing: 1px;
+  }
+  .hero-title-line2,
+  .hero-title-line3 {
+    font-size: 20px;
   }
   .hero-subtitle {
     font-size: 15px;

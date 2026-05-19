@@ -5,10 +5,11 @@ const projectName = 'Project'
 
 const navItems = [
   { label: 'Overview', href: '#overview' },
-  { label: 'Abstract', href: '#abstract' },
-  { label: 'Method', href: '#method' },
-  { label: 'Results', href: '#results' },
   { label: 'Demo', href: '#demo' },
+  { label: 'Abstract', href: '#abstract' },
+  { label: 'Overall', href: '#overall' },
+  { label: 'Pipeline', href: '#pipeline' },
+  { label: 'Results', href: '#results' },
   { label: 'BibTeX', href: '#bibtex' },
 ]
 

@@ -1,5 +1,7 @@
 # academic-project-page-template-vue
 
+在浏览器输入http://localhost:5173/Uni-lavira，即可启动
+
 ![img](https://github.com/user-attachments/assets/0b6084a8-ad9c-4a1b-81b2-1f9591c7eabb)
 
 > This project is in development, and welcome any suggestions.
