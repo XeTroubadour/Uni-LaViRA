@@ -2,32 +2,28 @@
 import SectionWrapper from '../SectionWrapper.vue';
 
 const tableData = [
-  { model: 'Model A', params: '10 B', value_a: '123', value_b: '321' },
-  { model: 'Model B', params: '30 B', value_a: '456', value_b: '654' },
-  { model: 'Model C', params: '20 B', value_a: '789', value_b: '987' },
-  { model: 'Model D', params: '5 B', value_a: '100', value_b: '200' },
+  { benchmark: 'VLN-CE R2R',  sr: '60.7±2.1',  osr: '73.7±1.2',    ne: '3.66±0.26',    spl: '47.7±1.6',  ndtw: '—',        acc: '—' },
+  { benchmark: 'VLN-CE RxR',  sr: '51.3±2.3',  osr: '—',           ne: '6.48±0.14',    spl: '34.0±1.9',  ndtw: '53.7±0.6', acc: '—' },
+  { benchmark: 'HM3D-v2',     sr: '77.7±2.1',  osr: '—',           ne: '—',            spl: '46.1±1.8',  ndtw: '—',        acc: '—' },
+  { benchmark: 'HM3D-OVON',   sr: '60.0±6.1',  osr: '—',           ne: '—',            spl: '40.5±1.1',  ndtw: '—',        acc: '—' },
+  { benchmark: 'MP3D-EQA',    sr: '—',         osr: '—',           ne: '—',            spl: '—',         ndtw: '—',        acc: '54.7±2.3' },
+  { benchmark: 'OpenUAV-UM',  sr: '40.00±3.46', osr: '67.33±5.51', ne: '84.29±11.20',  spl: '30.37±2.23', ndtw: '—',        acc: '—' },
 ]
 </script>
 
 <template>
-  <SectionWrapper id="results" title="Results">
+  <SectionWrapper id="results" title="Results" wide>
     <div class="table-card">
-      <el-tabs class="dark-tabs" model-value="Method A">
-        <el-tab-pane label="Method A" name="Method A">
-          <el-table :data="tableData" :default-sort="{ prop: 'value_b', order: 'descending' }" scrollbar-always-on>
-            <el-table-column prop="model" label="Model" width="100" sortable/>
-            <el-table-column prop="params" label="#Params" min-width="120" sortable/>
-            <el-table-column prop="value_a" label="Value A" min-width="120" sortable/>
-            <el-table-column prop="value_b" label="Value B" min-width="120" sortable/>
-          </el-table>
-        </el-tab-pane>
-        <el-tab-pane label="Method B" name="Method B">
-          <p style="color: var(--text-secondary); padding: 20px;">Method B results placeholder</p>
-        </el-tab-pane>
-        <el-tab-pane label="Method C" name="Method C">
-          <p style="color: var(--text-secondary); padding: 20px;">Method C results placeholder</p>
-        </el-tab-pane>
-      </el-tabs>
+      <p class="table-caption">Uni-LaViRA results across six benchmarks (100-episode stratified subset, mean±std over three seeds).</p>
+      <el-table :data="tableData" scrollbar-always-on>
+        <el-table-column prop="benchmark" label="Benchmark" width="150" fixed />
+        <el-table-column prop="sr" label="SR↑" min-width="120" />
+        <el-table-column prop="osr" label="OSR↑" min-width="120" />
+        <el-table-column prop="ne" label="NE↓" min-width="130" />
+        <el-table-column prop="spl" label="SPL↑" min-width="120" />
+        <el-table-column prop="ndtw" label="nDTW↑" min-width="120" />
+        <el-table-column prop="acc" label="ACC↑" min-width="120" />
+      </el-table>
     </div>
   </SectionWrapper>
 </template>
@@ -41,21 +37,10 @@ const tableData = [
   overflow: hidden;
 }
 
-/* Tabs dark theme */
-:deep(.el-tabs__nav-wrap::after) {
-  background-color: var(--border-subtle) !important;
-}
-:deep(.el-tabs__item) {
-  color: var(--text-secondary) !important;
-}
-:deep(.el-tabs__item.is-active) {
-  color: var(--accent) !important;
-}
-:deep(.el-tabs__item:hover) {
-  color: var(--text-primary) !important;
-}
-:deep(.el-tabs__active-bar) {
-  background-color: var(--accent) !important;
+.table-caption {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
 }
 
 /* Table dark theme */
@@ -69,6 +54,7 @@ const tableData = [
   --el-table-header-text-color: var(--text-heading);
   --el-table-current-row-bg-color: var(--bg-card-hover);
   color: var(--text-primary);
+  font-size: 14px;
 }
 :deep(.el-table th.el-table__cell) {
   background-color: var(--bg-secondary) !important;
@@ -81,24 +67,14 @@ const tableData = [
 :deep(.el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell) {
   background-color: var(--bg-card-hover) !important;
 }
-:deep(.el-table .sort-caret.ascending) {
-  border-bottom-color: var(--text-tertiary);
-}
-:deep(.el-table .sort-caret.descending) {
-  border-top-color: var(--text-tertiary);
-}
-:deep(.el-table .ascending .sort-caret.ascending) {
-  border-bottom-color: var(--accent);
-}
-:deep(.el-table .descending .sort-caret.descending) {
-  border-top-color: var(--accent);
-}
 
 /* Scrollbar */
-:deep(.el-scrollbar__bar) {
-  background-color: var(--text-tertiary);
-}
 :deep(.el-scrollbar__thumb) {
   background-color: var(--text-tertiary);
+}
+
+/* Fixed column shadow for dark theme */
+:deep(.el-table__fixed::before) {
+  background-color: var(--border-subtle) !important;
 }
 </style>

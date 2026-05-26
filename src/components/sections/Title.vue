@@ -15,37 +15,45 @@ const subtitle = ''
 
 // 作者清单
 const authors = [
-  { name: "Author One", homepage: "#", flags: "1,*" },
-  { name: "Author Two", homepage: "#", flags: "2" },
-  { name: "Author Three", homepage: "#", flags: "1" },
+  { name: "Hongyu Ding", homepage: "#", flags: "1,2,*" },
+  { name: "Sizhuo Zhang", homepage: "#", flags: "3,*" },
+  { name: "Ziming Xu", homepage: "#", flags: "1,*" },
+  { name: "Jinwen Guo", homepage: "#", flags: "1" },
+  { name: "Hongxiu Liu", homepage: "#", flags: "1" },
+  { name: "Xingzhi Cheng", homepage: "#", flags: "1" },
+  { name: "Zixuan Chen", homepage: "#", flags: "1" },
+  { name: "Haifei Qi", homepage: "#", flags: "4" },
+  { name: "Duo Wang", homepage: "#", flags: "4" },
+  { name: "Hao Xu", homepage: "#", flags: "1" },
+  { name: "Jieqi Shi", homepage: "#", flags: "1,†" },
+  { name: "Yifan Zhang", homepage: "#", flags: "2,†" },
+  { name: "Jing Huo", homepage: "#", flags: "1,†" },
+  { name: "Jian Cheng", homepage: "#", flags: "2" },
+  { name: "Yang Gao", homepage: "#", flags: "1" },
+  { name: "Jiebo Luo", homepage: "#", flags: "5" },
 ]
 
 // 单位清单
 const affiliations = [
-  { flag: "1", name: "University A" },
-  { flag: "2", name: "University B" },
+  { flag: "1", name: "Nanjing University" },
+  { flag: "2", name: "Institute of Automation, Chinese Academy of Sciences" },
+  { flag: "3", name: "Beihang University" },
+  { flag: "4", name: "BMW (Nanjing) Information Technology Co., Ltd." },
+  { flag: "5", name: "University of Rochester" },
 ]
 
 // 脚注
-const footnote = "* Corresponding Author"
+const footnote = "* Equal contribution    † Corresponding authors"
 
 // 按钮
 const buttons = [
-  { name: "Paper", href: "#", icon: Document },
   { name: "arXiv", href: "#", icon: Document },
   { name: "Code", href: "https://github.com/JunyaoHu/academic-project-page-template-vue", icon: Files },
-  { name: "Demo", href: "#", icon: MagicStick },
-  { name: "Video", href: "#", icon: Film },
   { name: "BibTeX", href: "#bibtex", icon: LinkIcon },
 ]
 
-// 统计数字
-const stats = [
-  { value: '12', label: 'Tasks' },
-  { value: '5', label: 'Benchmarks' },
-  { value: '100K+', label: 'Trajectories' },
-  { value: '50+', label: 'Scenes' },
-]
+// 统计数字（已移除）
+const stats = []
 
 </script>
 

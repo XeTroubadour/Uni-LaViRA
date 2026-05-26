@@ -13,10 +13,10 @@ const fixedVideos = [
 
 // --- Filterable demo data ---
 const robots = [
-  { label: 'Aloha', value: 'Aloha' },
-  { label: 'UAV',   value: 'UAV' },
   { label: 'G1',    value: 'G1' },
   { label: 'GO1',   value: 'GO1' },
+  { label: 'Aloha', value: 'Aloha' },
+  { label: 'UAV',   value: 'UAV' },
 ]
 
 const tasks = [
@@ -43,7 +43,7 @@ const combos = [
   { idx: 9, scene: 'outdoor', task: 'eqa',    target: 'sofa' },
 ]
 
-const selectedRobot = ref('Aloha')
+const selectedRobot = ref('G1')
 const selectedTask  = ref('vln')
 const selectedScene = ref('indoor')
 

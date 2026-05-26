@@ -2,11 +2,11 @@
 import { ref } from 'vue'
 import SectionWrapper from '../SectionWrapper.vue';
 
-const bibtex = `@article{junyaohu2023template,
-    title={Academic Project Page Template Vue},
-    author={Hu, Junyao},
-    journal={GitHub},
-    year={2023}
+const bibtex = `@article{ding2025unilavira,
+    title={Uni-LaViRA: Language-Vision-Robot Actions Translation for Unified Embodied Navigation},
+    author={Ding, Hongyu and Zhang, Sizhuo and Xu, Ziming and Guo, Jinwen and Liu, Hongxiu and Cheng, Xingzhi and Chen, Zixuan and Qi, Haifei and Wang, Duo and Xu, Hao and Shi, Jieqi and Zhang, Yifan and Huo, Jing and Cheng, Jian and Gao, Yang and Luo, Jiebo},
+    journal={arXiv preprint},
+    year={2025}
 }`
 
 const copied = ref(false)
