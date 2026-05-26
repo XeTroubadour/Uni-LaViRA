@@ -13,7 +13,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`
 </script>
 
 <template>
-  <SectionWrapper :id="id" :title="title" wide>
+  <SectionWrapper :id="id" :title="title">
     <div class="figure-card">
       <img :src="`${base}${src}`" :alt="alt" class="figure-img" />
     </div>
