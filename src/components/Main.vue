@@ -5,6 +5,7 @@ import BibTeX from './sections/BibTeX.vue'
 import Video from './sections/Video.vue'
 import Table from './sections/Table.vue'
 import FigureSection from './sections/FigureSection.vue'
+import OneMoreThing from './sections/OneMoreThing.vue'
 
 export default {
   components: {
@@ -14,6 +15,7 @@ export default {
     Video,
     Table,
     FigureSection,
+    OneMoreThing,
   }
 }
 </script>
@@ -25,5 +27,6 @@ export default {
   <FigureSection id="overall" title="Overall" src="uni-lavira/teasor.png" alt="Overall architecture" />
   <FigureSection id="pipeline" title="Pipeline" src="uni-lavira/pipeline.png" alt="Pipeline" />
   <Table/>
+  <OneMoreThing/>
   <BibTeX/>
 </template>

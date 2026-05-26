@@ -5,10 +5,8 @@ import SectionWrapper from '../SectionWrapper.vue'
 const rawBase = import.meta.env.BASE_URL
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`
 
-// --- Fixed videos ---
-const fixedVideos = [
-  `${base}video_compressed/02.mp4`,
-]
+// --- Fixed videos (moved to OneMoreThing) ---
+const fixedVideos = []
 
 // --- Filterable demo data ---
 const robots = [
@@ -83,10 +81,26 @@ const currentLabel = computed(() => {
       ></video>
     </div>
 
-    <!-- Demo title + filter module -->
-    <SectionWrapper title="Demo">
+    <!-- Demo filter module (no title) -->
+    <SectionWrapper>
 
-      <!-- Filters -->
+      <!-- Matched video first -->
+      <div v-if="matched" style="margin-bottom: 24px;">
+        <video
+          :key="currentSrc"
+          :src="currentSrc"
+          controls
+          preload="metadata"
+          playsinline
+          class="demo-video"
+        ></video>
+        <p class="video-caption">{{ currentLabel }}</p>
+      </div>
+      <div v-else class="no-match">
+        <p>No matching video for this combination.</p>
+      </div>
+
+      <!-- Filters below video -->
       <div class="filter-group">
         <span class="filter-label">Robot</span>
         <div class="filter-pills">
@@ -120,22 +134,6 @@ const currentLabel = computed(() => {
         </div>
       </div>
 
-      <!-- Matched video -->
-      <div v-if="matched" style="margin-top: 24px;">
-        <video
-          :key="currentSrc"
-          :src="currentSrc"
-          controls
-          preload="metadata"
-          playsinline
-          class="demo-video"
-        ></video>
-        <p class="video-caption">{{ currentLabel }}</p>
-      </div>
-      <div v-else class="no-match">
-        <p>No matching video for this combination.</p>
-      </div>
-
     </SectionWrapper>
 
   </section>
@@ -144,6 +142,9 @@ const currentLabel = computed(() => {
 <style scoped>
 .demo-section {
   width: 100%;
+}
+.demo-section :deep(.section-wrapper) {
+  padding-top: 16px;
 }
 
 /* Fixed videos area */

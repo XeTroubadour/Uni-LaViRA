@@ -116,7 +116,7 @@ const stats = []
 
 <style scoped>
 .hero {
-  padding: 100px 24px 48px;
+  padding: 100px 24px 16px;
   text-align: center;
 }
 
