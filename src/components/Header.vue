@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 
-const projectName = 'Project'
+const projectName = 'LaViRA'
+const rawBase = import.meta.env.BASE_URL
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`
 
 const navItems = [
   { label: 'Overview', href: '#overview' },
@@ -28,7 +30,10 @@ function closeMobile() {
   <nav class="navbar">
     <div class="navbar-inner">
       <!-- Left: project name -->
-      <a href="#" class="navbar-brand" @click="closeMobile">{{ projectName }}</a>
+      <a href="#" class="navbar-brand" @click="closeMobile">
+        <img :src="`${base}favicon.png`" alt="logo" class="navbar-logo" />
+        {{ projectName }}
+      </a>
 
       <!-- Hamburger button for mobile -->
       <button class="hamburger" :class="{ open: mobileOpen }" @click="toggleMobile" aria-label="Toggle navigation">
@@ -85,9 +90,19 @@ function closeMobile() {
   text-decoration: none;
   letter-spacing: 1px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .navbar-brand:hover {
   color: var(--accent);
+}
+
+.navbar-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .navbar-links {

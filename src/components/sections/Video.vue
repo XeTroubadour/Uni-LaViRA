@@ -7,7 +7,6 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`
 
 // --- Fixed videos ---
 const fixedVideos = [
-  `${base}video_compressed/01.mp4`,
   `${base}video_compressed/02.mp4`,
 ]
 
