@@ -12,16 +12,16 @@ const fixedVideos = [
 
 // --- Filterable demo data ---
 const robots = [
-  { label: 'G1',    value: 'G1' },
-  { label: 'GO1',   value: 'GO1' },
-  { label: 'Aloha', value: 'Aloha' },
-  { label: 'UAV',   value: 'UAV' },
+  { label: 'Unitree G1',        value: 'G1' },
+  { label: 'Unitree Go1',       value: 'GO1' },
+  { label: 'Agilex Cobot Magic', value: 'Aloha' },
+  { label: 'UAV',               value: 'UAV' },
 ]
 
 const tasks = [
-  { label: 'VLN',       value: 'vln' },
-  { label: 'ObjectNav', value: 'objnav' },
-  { label: 'EQA',       value: 'eqa' },
+  { label: 'VLN',         value: 'vln' },
+  { label: 'ObjectNav',   value: 'objnav' },
+  { label: 'Embodied QA', value: 'eqa' },
 ]
 
 const scenes = [
@@ -63,7 +63,7 @@ const currentLabel = computed(() => {
   const robotLabel = robots.find(r => r.value === selectedRobot.value)?.label
   const sceneLabel = scenes.find(s => s.value === selectedScene.value)?.label
   const taskLabel  = tasks.find(t => t.value === selectedTask.value)?.label
-  return `${robotLabel} · ${sceneLabel} · ${taskLabel} · ${matched.value.target}`
+  return `${robotLabel} · ${sceneLabel} · ${taskLabel}`
 })
 </script>
 

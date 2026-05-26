@@ -38,7 +38,7 @@ const tabs = [
             </tr>
           </thead>
           <tbody>
-            <tr class="section-row"><td colspan="9">Training Navigation Foundation Models</td></tr>
+            <tr class="section-row"><td colspan="9">Supervised Learning (Training Method)</td></tr>
             <tr><td class="method">NaVid</td><td>5.47</td><td>49.1</td><td>37.4</td><td>35.9</td><td>8.41</td><td>34.5</td><td>23.8</td><td>—</td></tr>
             <tr><td class="method">Uni-NaVid</td><td>5.58</td><td>53.3</td><td>47.0</td><td>42.7</td><td>6.24</td><td>48.7</td><td>40.9</td><td>—</td></tr>
             <tr><td class="method">NaVILA</td><td>5.22</td><td>62.5</td><td>54.0</td><td>49.0</td><td>6.77</td><td>49.3</td><td>44.0</td><td>58.8</td></tr>
@@ -48,6 +48,7 @@ const tabs = [
             <tr><td class="method">OmniNav</td><td>3.74</td><td>74.6</td><td>69.5</td><td>66.1</td><td>3.77</td><td>73.6</td><td>62.0</td><td>—</td></tr>
             <tr><td class="method">InternVLA-N1</td><td>4.83</td><td>63.3</td><td>58.2</td><td>54.0</td><td>5.91</td><td>53.5</td><td>46.1</td><td>65.3</td></tr>
             <tr><td class="method">ABot-N0</td><td>3.78</td><td>70.8</td><td>66.4</td><td>63.9</td><td>3.83</td><td>69.3</td><td>60.0</td><td>—</td></tr>
+            <tr><td class="method">SPAN-Nav</td><td>4.07</td><td>75.3</td><td>66.3</td><td>59.3</td><td>4.20</td><td>69.7</td><td>60.1</td><td>67.9</td></tr>
             <tr class="section-row zeroshot"><td colspan="9">Zero-Shot (Training-Free)</td></tr>
             <tr><td class="method">InstructNav</td><td>6.89</td><td>47.0</td><td>31.0</td><td>24.0</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td class="method">Open-Nav</td><td>6.70</td><td>23.0</td><td>19.0</td><td>16.1</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
@@ -79,7 +80,7 @@ const tabs = [
             </tr>
           </thead>
           <tbody>
-            <tr class="section-row"><td colspan="13">Trained / Supervised Baselines (UM Split)</td></tr>
+            <tr class="section-row"><td colspan="13">Supervised Learning (Training Method)</td></tr>
             <tr><td class="method">Random Action</td><td>203</td><td>0.00</td><td>0.00</td><td>0.00</td><td>158</td><td>0.00</td><td>0.00</td><td>0.00</td><td>266</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
             <tr><td class="method">Fixed Action</td><td>180</td><td>2.61</td><td>0.52</td><td>0.39</td><td>133</td><td>4.28</td><td>0.89</td><td>0.67</td><td>248</td><td>0.25</td><td>0.00</td><td>0.00</td></tr>
             <tr><td class="method">CMA</td><td>142</td><td>10.0</td><td>2.30</td><td>2.16</td><td>102</td><td>14.3</td><td>3.57</td><td>3.33</td><td>197</td><td>4.03</td><td>0.50</td><td>0.50</td></tr>
@@ -111,21 +112,25 @@ const tabs = [
             </tr>
           </thead>
           <tbody>
-            <tr class="section-row"><td colspan="6">Training Navigation Foundation Models</td></tr>
-            <tr><td class="method">DD-PPO + ObjNet-RL</td><td>55.1</td><td>26.3</td><td>—</td><td>—</td><td>—</td></tr>
-            <tr><td class="method">DAgRL+OD</td><td>—</td><td>—</td><td>37.1</td><td>19.8</td><td>—</td></tr>
-            <tr><td class="method">Uni-NaVid</td><td>61.0</td><td>30.8</td><td>39.5</td><td>19.8</td><td>47.3</td></tr>
-            <tr><td class="method">NavFoM</td><td>68.3</td><td>37.1</td><td>45.2</td><td>31.9</td><td>—</td></tr>
+            <tr class="section-row"><td colspan="6">Supervised Learning (Training Method)</td></tr>
+            <tr><td class="method">EQA(w/GT)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>46.0</td></tr>
+            <tr><td class="method">DD-PPO</td><td>27.9</td><td>14.2</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="method">Habitat-Web</td><td>57.6</td><td>23.8</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="method">PIRLNav</td><td>70.4</td><td>34.1</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="method">OVRL-v2</td><td>64.7</td><td>28.1</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="method">NaviLLM</td><td>—</td><td>—</td><td>—</td><td>—</td><td>44.5</td></tr>
+            <tr><td class="method">DAgRL+OD</td><td>—</td><td>—</td><td>37.1</td><td>19.9</td><td>—</td></tr>
+            <tr><td class="method">Uni-NaVid</td><td>73.7</td><td>37.1</td><td>39.5</td><td>19.8</td><td>47.3</td></tr>
+            <tr><td class="method">NavFoM</td><td>—</td><td>—</td><td>43.6</td><td>31.3</td><td>—</td></tr>
+            <tr><td class="method">FiLM-Nav</td><td>77.0</td><td>41.3</td><td>40.8</td><td>24.4</td><td>—</td></tr>
             <tr><td class="method">OmniNav</td><td>—</td><td>—</td><td>59.2</td><td>33.2</td><td>—</td></tr>
             <tr><td class="method">ABot-N0</td><td>—</td><td>—</td><td>54.0</td><td>30.5</td><td>—</td></tr>
             <tr class="section-row zeroshot"><td colspan="6">Zero-Shot (Training-Free)</td></tr>
-            <tr><td class="method">L3MVN</td><td>36.3</td><td>15.7</td><td>—</td><td>—</td><td>—</td></tr>
-            <tr><td class="method">Frontier + LLM QA</td><td>—</td><td>—</td><td>—</td><td>—</td><td>42.0</td></tr>
-            <tr><td class="method">VLFM</td><td>52.5</td><td>30.4</td><td class="second">35.2</td><td class="second">19.6</td><td>—</td></tr>
+            <tr><td class="method">L3MVN</td><td>54.2</td><td>25.5</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="method">VLFM</td><td>62.6</td><td>31.0</td><td class="second">38.5</td><td class="second">22.2</td><td>—</td></tr>
             <tr><td class="method">OpenFMNav</td><td>54.9</td><td>24.4</td><td>—</td><td>—</td><td>—</td></tr>
-            <tr><td class="method">Explore-til-confident</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="second">54.0</td></tr>
             <tr><td class="method">InstructNav</td><td>58.0</td><td>20.9</td><td>—</td><td>—</td><td>—</td></tr>
-            <tr><td class="method">SG-Nav</td><td>49.6</td><td>25.5</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="method">SG-Nav</td><td>54.0</td><td>24.9</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td class="method">ApexNav</td><td class="second">76.2</td><td>38.0</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td class="method">DSCD-Nav</td><td>73.0</td><td class="second">38.7</td><td>—</td><td>—</td><td>—</td></tr>
             <tr><td class="method">ReMemNav</td><td>67.8</td><td>36.6</td><td>—</td><td>—</td><td>—</td></tr>
