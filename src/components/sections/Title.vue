@@ -47,8 +47,7 @@ const footnote = "* Equal contribution    † Corresponding authors"
 
 // 按钮
 const buttons = [
-  { name: "arXiv", href: "#", icon: Document },
-  { name: "Code", href: "https://github.com/JunyaoHu/academic-project-page-template-vue", icon: Files },
+  { name: "arXiv", href: "https://arxiv.org/abs/2605.27582", icon: Document },
   { name: "BibTeX", href: "#bibtex", icon: LinkIcon },
 ]
 
