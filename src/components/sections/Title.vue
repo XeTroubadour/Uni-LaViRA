@@ -48,6 +48,7 @@ const footnote = "* Equal contribution    † Corresponding authors"
 // 按钮
 const buttons = [
   { name: "arXiv", href: "https://arxiv.org/abs/2605.27582", icon: Document },
+  { name: "Code", href: "https://github.com/NJU-R-L-Group-Embodied-Lab/lavira-code", icon: Files },
   { name: "BibTeX", href: "#bibtex", icon: LinkIcon },
 ]
 
