@@ -94,6 +94,11 @@ const stats = []
       <!-- Footnote -->
       <div class="hero-footnote">{{ footnote }}</div>
 
+      <!-- Previously -->
+      <div class="hero-previously">
+        Previously on LaViRA: <a href="https://robo-lavira.github.io/lavira-zs-vln/">robo-lavira.github.io/lavira-zs-vln</a>
+      </div>
+
       <!-- Buttons -->
       <div class="hero-buttons">
         <a v-for="btn in buttons" :key="btn.name" :href="btn.href" class="hero-btn">
@@ -237,6 +242,20 @@ const stats = []
   font-size: 13px;
   color: var(--text-tertiary);
   margin-bottom: 32px;
+}
+
+/* Previously link */
+.hero-previously {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.hero-previously a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.hero-previously a:hover {
+  color: var(--accent-hover);
 }
 
 /* Buttons */
