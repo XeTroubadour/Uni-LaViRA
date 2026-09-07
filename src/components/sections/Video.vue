@@ -5,8 +5,10 @@ import SectionWrapper from '../SectionWrapper.vue'
 const rawBase = import.meta.env.BASE_URL
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`
 
-// --- Fixed videos (moved to OneMoreThing) ---
-const fixedVideos = []
+// --- Introductory video ---
+const fixedVideos = [
+  `${base}video/da1ce7193e77b4d6da1dd5fba009b029.mp4`,
+]
 
 // --- Filterable demo data ---
 const robots = [
@@ -74,6 +76,8 @@ const currentLabel = computed(() => {
         v-for="(src, i) in fixedVideos"
         :key="i"
         :src="src"
+        width="1280"
+        height="720"
         controls
         preload="metadata"
         playsinline
